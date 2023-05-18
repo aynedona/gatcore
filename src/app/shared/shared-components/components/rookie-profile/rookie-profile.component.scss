@@ -1,0 +1,38 @@
+@import '../../../../../assets/style/variables.scss';
+
+.rookie-profile {
+  position: absolute;
+  right: 0;
+  top: 64px;
+  background: #28272e;
+  height: 73px;
+  padding: 0 53px 0 32px;
+  .icon-rookie {
+    width: 49px;
+    height: 49px;
+    background: $white;
+    border-radius: 50%;
+  }
+  .text-rookie {
+    margin: 0 32px 0 34px;
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      color: $primary-font;
+    }
+  }
+
+  .progress-rookie {
+    .mat-mdc-progress-spinner {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    p {
+      color: $primary-font;
+      font-size: 12px;
+      position: absolute;
+      top: 29px;
+      right: 66px;
+    }
+  }
+}

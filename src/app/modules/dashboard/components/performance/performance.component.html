@@ -1,0 +1,25 @@
+<mat-card class="default-card performance d-flex align-items-center">
+  <mat-card-content>
+    <div class="title">
+      <h2 class="title-card-dashboard text-center">Performance de Fornecedores Criticos</h2>
+    </div>
+
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [dataLabels]="chartOptions.dataLabels"
+        [legend]="chartOptions.legend"
+        [markers]="chartOptions.markers"
+        [grid]="chartOptions.grid"
+        [yaxis]="chartOptions.yaxis"
+        [title]="chartOptions.title"
+        [colors]="chartOptions.colors"
+      ></apx-chart>
+    </div>
+
+  </mat-card-content>
+</mat-card>

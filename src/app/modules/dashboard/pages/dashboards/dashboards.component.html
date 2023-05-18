@@ -1,0 +1,19 @@
+<app-title-page [titlePage]="titlePage"></app-title-page>
+<app-rookie-profile></app-rookie-profile>
+
+<div class="col-12 px-1 py-4 d-flex flex-wrap"
+  cdkDropList
+  (cdkDropListDropped)="drop($event)"
+  [cdkDropListData]="componentes"
+>
+  <app-suppliers cdkDrag></app-suppliers>
+  <app-conformity cdkDrag></app-conformity>
+  <app-average-scores cdkDrag></app-average-scores>
+  <app-score cdkDrag></app-score>
+  <app-alert cdkDrag></app-alert>
+  <app-risk cdkDrag></app-risk>
+  <app-performance cdkDrag></app-performance>
+  <app-insights cdkDrag></app-insights>
+  <app-evaluations cdkDrag></app-evaluations>
+  <app-hub-score cdkDrag></app-hub-score>
+</div>

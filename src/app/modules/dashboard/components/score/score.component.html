@@ -1,0 +1,33 @@
+<mat-card class="default-card score d-flex align-items-center">
+  <mat-card-content>
+    <div class="title">
+      <h2 class="title-card-dashboard">Seu Score em relação ao Mercado</h2>
+    </div>
+
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [dataLabels]="chartOptions.dataLabels"
+        [legend]="chartOptions.legend"
+        [markers]="chartOptions.markers"
+        [grid]="chartOptions.grid"
+        [yaxis]="chartOptions.yaxis"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+
+    <div class="filter-dashboard">
+      <div class="mesage-dashboard d-flex flex-column align-items-center">
+        <p>Complete o cadastro da sua empresa para ter acesso</p>
+        <div class="button">
+          Ir para cadastro
+        </div>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>

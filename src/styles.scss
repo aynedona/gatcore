@@ -1,1 +1,241 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+@include mat.core();
+
+$gat-primary: (
+    50 : #e5e5e6,
+    100 : #bfbec0,
+    200 : #949397,
+    300 : #69686d,
+    400 : #48474d,
+    500 : #28272e,
+    600 : #242329,
+    700 : #1e1d23,
+    800 : #18171d,
+    900 : #0f0e12,
+    A100 : #cecece,
+    A200 : #7c828a,
+    A400 : #7c7c7c,
+    A700 : #707376,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$gat-secondary: (
+    50 : #f8ece3,
+    100 : #edd0ba,
+    200 : #e1b08c,
+    300 : #d5905d,
+    400 : #cc793b,
+    500 : #c36118,
+    600 : #bd5915,
+    700 : #b54f11,
+    800 : #ae450e,
+    900 : #a13308,
+    A100 : #ffd8cd,
+    A200 : #ffb19a,
+    A400 : #ff8a67,
+    A700 : #ff764d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$gatcore-primary: mat.define-palette($gat-primary);
+$gatcore-accent: mat.define-palette($gat-secondary);
+
+$gatcore-warn: mat.define-palette(mat.$red-palette);
+
+$gatcore-theme: mat.define-dark-theme((
+  color: (
+    primary: $gatcore-primary,
+    accent: $gatcore-accent,
+    warn: $gatcore-warn,
+  )
+));
+
+@include mat.all-component-themes($gatcore-theme);
+
+@import "./assets/style/variables.scss";
+
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("./assets/fonts/Helvetica-Neue-Regular.woff2") format("woff2")
+    url("./assets/fonts/Helvetica-Neue-Regular.woff") format("woff"),
+		url("./assets/fonts/Helvetica-Neue-Regular.otf") format("otf"),
+		url("./assets/fonts/Helvetica-Neue-Regular.ttf") format("truetype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; background: $background; }
+
+
+.mat-toolbar {
+  background: $background;
+}
+.mat-toolbar-single-row {
+  align-items: start !important;
+}
+.spinner-rookie-profile {
+  circle {
+    stroke: $green !important;
+  }
+  .mdc-circular-progress__determinate-container {
+    transform: rotate(0);
+  }
+}
+.spinner-supplier {
+  circle {
+    stroke: $border-blue !important;
+  }
+}
+.progress-score {
+  circle {
+    stroke: $orange-light !important;
+  }
+  .mdc-circular-progress__determinate-container {
+    transform: rotate(0);
+  }
+}
+
+.align-content {
+  padding: 0 50px
+}
+
+.default-card {
+  padding: 5px 0 10px;
+  margin: 0 10px;
+  background: $background-opacity;
+  margin-bottom: 20px;
+  .title {
+    margin-bottom: 20px;
+    .title-card-dashboard {
+      color: $primary-font;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .subtitle-card-dashboard {
+      color: $secondary-font;
+      font-size: 15px;
+      margin: 5px 0 0 0;
+    }
+  }
+  .text-content-card {
+    font-size: 16px;
+    color: $gray-light;
+  }
+  hr {
+    color: $color-line;
+  }
+
+}
+
+.align-stepper {
+  .mat-horizontal-content-container {
+    display: none !important;
+  }
+}
+
+.mat-mdc-form-field-infix {
+  min-height: 38px;
+}
+.mdc-text-field {
+  border-color: $border-gray;
+  border-radius: 1px !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.mdc-tab__text-label {
+  color: $gray !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: $gray-extra-light !important;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: $orange !important;
+}
+.mdc-button {
+  margin-right: 10px;
+}
+.mdc-button--outlined .mdc-button__ripple {
+  border-color: $orange !important;
+}
+
+.mat-step-header {
+  display: flex;
+  flex-direction: column;
+}
+.mat-horizontal-stepper-header {
+  height: 92px !important;
+  pointer-events: none !important;
+}
+.mat-step-icon {
+  width: 44px !important;
+  height: 44px !important;
+  background-color: $background !important;
+  border: 5px solid #43DE97;
+  margin-bottom: 20px;
+  .mat-icon {
+    font-size: 24px !important;
+    height: 24px !important;
+    width: 24px !important;
+  }
+  &.mat-step-icon-state-av_timer {
+    background: #43DE97 !important;
+    border: 5px solid #43DE97;
+    .mat-icon {
+      color: #178D57;
+    }
+  }
+  &.mat-step-icon-state-done {
+    background: $border-blue !important;
+    border: 5px solid $border-blue;
+    .mat-icon {
+      color: #1E95A5;
+    }
+  }
+}
+.mat-stepper-horizontal-line {
+  border-top-width: 4px !important;
+  border-top-color: $border-blue;
+}
+
+

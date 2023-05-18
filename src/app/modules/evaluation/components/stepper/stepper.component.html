@@ -1,0 +1,34 @@
+<div class="align-stepper d-flex align-items-center justify-content-center">
+  <div class="col-2 title-stepper d-flex justify-content-center">
+    Status:
+  </div>
+  <div class="col-9">
+    <mat-horizontal-stepper>
+      <mat-step label="Enviado para parceiro" [state]="getStep(1)" [completed]="stepCompleted(1)">
+        <ng-template matStepLabel>
+          <p class="text">Enviado para parceiro</p>
+        </ng-template>
+      </mat-step>
+      <mat-step label="Respostas recebidas" [state]="getStep(2)" [completed]="stepCompleted(2)">
+        <ng-template matStepLabel>
+          <p class="text">Respostas recebidas</p>
+        </ng-template>
+      </mat-step>
+      <mat-step label="Observações e Análises" [state]="getStep(3)" [completed]="stepCompleted(3)">
+        <ng-template matStepLabel>
+          <p class="text">Observações e Análises</p>
+        </ng-template>
+      </mat-step>
+      <mat-step label="Acordo com parceiro" [state]="getStep(4)" [completed]="stepCompleted(4)">
+        <ng-template matStepLabel>
+          <p class="text">Acordo com parceiro</p>
+        </ng-template>
+      </mat-step>
+      <mat-step label="Concluído" [state]="getStep(5)" [completed]="stepCompleted(5)">
+        <ng-template matStepLabel>
+          <p class="text">Concluído</p>
+        </ng-template>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

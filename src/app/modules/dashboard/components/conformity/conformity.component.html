@@ -1,0 +1,21 @@
+<mat-card class="default-card conformity d-flex align-items-center">
+  <mat-card-content>
+    <div class="title">
+      <h2 class="title-card-dashboard text-center">Conformidade de Fornecedores</h2>
+      <p class="subtitle-card-dashboard text-center">Empresa 1 x Empresa 2</p>
+    </div>
+
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [colors]="chartOptions.colors"
+      ></apx-chart>
+    </div>
+  </mat-card-content>
+</mat-card>

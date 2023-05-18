@@ -1,0 +1,17 @@
+@import '../../../../../assets/style/variables.scss';
+
+.score {
+  width: 539px;
+  height: 326px;
+  .progress-score {
+    position: relative;
+    margin-right: 30px;
+    p {
+      position: absolute;
+      top: 34px;
+      left: 30px;
+      font-size: 22px;
+      color: $primary-font;
+    }
+  }
+}

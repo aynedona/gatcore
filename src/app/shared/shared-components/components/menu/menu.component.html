@@ -1,0 +1,8 @@
+<div class="col-12 mt-4">
+  <div class="item-menu" *ngFor="let menuItem of menu">
+    <div class="align-menu d-flex flex-column align-items-center" (click)="route(menuItem)" [class.isActive]="menuItem.link == menuActive">
+      <mat-icon aria-hidden="false" aria-label="menuItem?.title" *ngIf="menuItem" [fontIcon]="menuItem.icon"></mat-icon>
+      <p class="title-menu">{{ menuItem?.title }}</p>
+    </div>
+  </div>
+</div>

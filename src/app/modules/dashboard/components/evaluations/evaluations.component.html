@@ -1,0 +1,22 @@
+<mat-card class="default-card evaluations d-flex align-items-center">
+  <mat-card-content>
+    <div class="title">
+      <h2 class="title-card-dashboard text-center">Fornecedores</h2>
+      <p class="subtitle-card-dashboard text-center">Total</p>
+    </div>
+
+    <div id="chart">
+      <apx-chart
+        class="donnut-chart"
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [labels]="chartOptions.labels"
+        [responsive]="chartOptions.responsive"
+        [legend]="chartOptions.legend"
+        [colors]="chartOptions.colors"
+        [stroke]="chartOptions.stroke"
+      ></apx-chart>
+    </div>
+
+  </mat-card-content>
+</mat-card>

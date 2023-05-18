@@ -1,0 +1,15 @@
+@import '../../../../../assets/style/variables.scss';
+
+.evaluations {
+  width: 224px;
+  height: 350px;
+  max-width: 350px;
+  min-height: 300px;
+}
+
+#chart {
+  max-width: 224px;
+  min-height: 250px;
+  margin: 5px auto;
+  padding: 0;
+}

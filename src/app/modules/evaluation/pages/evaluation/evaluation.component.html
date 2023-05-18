@@ -1,0 +1,158 @@
+<app-title-page [titlePage]="titlePage"></app-title-page>
+<div class="col-12 links-evaluation">
+  <a class="previous">Avaliações > </a>
+  <a class="current">Nova Avaliação</a>
+</div>
+
+<div class="col-12 align-content">
+  <app-rookie-profile></app-rookie-profile>
+
+  <div class="col-12 px-1 py-4">
+    <app-stepper *ngIf="evaluation" [status]="evaluation.status"></app-stepper>
+
+    <div class="col-12 d-flex data-evaluation">
+      <div class="col-2 d-flex card-company">
+        <mat-card class="col-12 default-card d-flex align-items-center">
+          <mat-card-content class="d-flex flex-column align-items-center">
+            <img src="../../../../../assets/images/reddit.svg" alt="Logo empresa">
+            <p class="name-company">{{ evaluation?.companyName }}</p>
+            <p class="description-company">{{ evaluation?.companyType }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-10 d-flex card-evaluation">
+        <mat-card class="col-12 default-card d-flex align-items-center">
+          <mat-card-content>
+            <form [formGroup]="formEvaluation" class="d-flex">
+              <div class="col-4">
+                <h2>Nome da Avaliação</h2>
+                <div class="form-group">
+                  <label for="id">ID:</label>
+                  <mat-form-field appearance="outline" class="col-md-4 col-sm-12 col-12 px-1">
+                    <input type="text" matInput placeholder="ID" formControlName="id">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="createdBy">CRIADO POR:</label>
+                  <mat-form-field appearance="outline" class="col-md-4 col-sm-12 col-12 px-1">
+                    <input type="text" matInput placeholder="Criado por" formControlName="createdBy">
+                  </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                  <label for="severity">SEVERIDADE:</label>
+                  <mat-form-field appearance="outline" class="col-md-4 col-sm-12 col-12 px-1">
+                    <input type="text" matInput placeholder="Severidade" formControlName="severity">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="createIn">CRIADO EM:</label>
+                  <mat-form-field appearance="outline" class="col-md-4 col-sm-12 col-12 px-1">
+                    <input type="text" matInput placeholder="Criado em" formControlName="createIn">
+                  </mat-form-field>
+                </div>
+                <div class="form-group">
+                  <label for="dueDate">PRAZO:</label>
+                  <mat-form-field appearance="outline" class="col-md-4 col-sm-12 col-12 px-1">
+                    <input type="text" matInput placeholder="Prazo" formControlName="dueDate">
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+
+    <div class="col-12 tabs-evaluation">
+      <mat-tab-group>
+        <mat-tab class="label-tab" label="Questionários"> Questionários </mat-tab>
+        <mat-tab class="label-tab" label="Respondentes" disabled> Respondentes </mat-tab>
+        <mat-tab class="label-tab" label="Questões" disabled> Questões </mat-tab>
+        <mat-tab class="label-tab" label="Apontamentos de Segurança" disabled> Apontamentos de Segurança </mat-tab>
+        <mat-tab class="label-tab" label="Plano de ação" disabled> Plano de ação </mat-tab>
+        <mat-tab class="label-tab" label="Documentos" disabled> Documentos </mat-tab>
+        <mat-tab class="label-tab" label="Atividade" disabled> Atividade </mat-tab>
+
+      </mat-tab-group>
+    </div>
+
+    <div class="col-12 buttons-evaluation">
+      <button mat-stroked-button color="accent">Adicionar</button>
+      <button mat-stroked-button color="accent">Excluir</button>
+    </div>
+
+    <div class="col-12 table-evaluation">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container matColumnDef="check">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <mat-checkbox (click)="$event.stopPropagation()"
+              (change)="$event ? selection.toggle(element) : null"
+              [checked]="selection.isSelected(element)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            NOME DO TEMPLATE
+          </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            DESCRIÇÃO
+          </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="pointing">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            PONTUAÇÃO
+          </th>
+          <td mat-cell *matCellDef="let element"> {{element.pointing}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="severity">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            SEVERIDADE
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="box-severity" [ngClass]="element?.severity.toLowerCase()">
+              {{element.severity}}
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            STATUS
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="box-status">
+              {{element.status}}
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+

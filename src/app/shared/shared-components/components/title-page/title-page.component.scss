@@ -1,0 +1,17 @@
+@import '../../../../../assets/style/variables.scss';
+
+.title {
+  margin: 41px 0 0 23px;
+  .align-title {
+    .mat-icon {
+      color: $primary-font;
+    }
+    h1 {
+      color: $white;
+      font-size: 24px;
+      margin-left: 20px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+}

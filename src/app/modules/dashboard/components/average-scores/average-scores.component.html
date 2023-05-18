@@ -1,0 +1,35 @@
+<mat-card class="default-card score d-flex align-items-center">
+  <mat-card-content>
+    <div class="align-data-title d-flex align-items-center">
+      <div class="progress-score">
+        <mat-progress-spinner
+          class="spinner-score"
+          mode="determinate"
+          value="75">
+        </mat-progress-spinner>
+        <p>255</p>
+      </div>
+
+      <div class="title mb-0">
+        <h2 class="title-card-dashboard">Média do Score de Terceiros</h2>
+        <p class="subtitle-card-dashboard">Atualização 22 / 12 / 2020</p>
+      </div>
+    </div>
+
+    <div id="chart">
+      <apx-chart
+        class="risk-chart"
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [stroke]="chartOptions.stroke"
+        [title]="chartOptions.title"
+        [colors]="chartOptions.colors"
+      ></apx-chart>
+    </div>
+
+  </mat-card-content>
+</mat-card>

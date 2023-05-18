@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "status": "response",
+    "companyName": "Empresa XPTO",
+    "companyType": "Fornecedor",
+    "createBy": "Fulano",
+    "severity": "Alta",
+    "createDate": "14/05/2023",
+    "dueDate": "14/05/2024",
+    "questions": [
+      {
+        "name": "LGPD",
+        "description": "Avaliação LGPD",
+        "pointing": 45,
+        "severity": "Alta",
+        "status": "done"
+      },
+      {
+        "name": "Questionário 1",
+        "description": "Avaliação questionário",
+        "pointing": 45,
+        "severity": "Media",
+        "status": "done"
+      },
+      {
+        "name": "Questionário 1",
+        "description": "Avaliação questionário",
+        "pointing": 45,
+        "severity": "Baixa",
+        "status": "done"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "status": "deal",
+    "companyName": "Empresa XYZ",
+    "companyType": "Fornecedor",
+    "createBy": "Ciclano",
+    "severity": "Baixa",
+    "createDate": "15/05/2023",
+    "dueDate": "15/05/2024",
+    "questions": [
+      {
+        "name": "LGPD",
+        "description": "Avaliação LGPD",
+        "pointing": 90,
+        "severity": "Alta",
+        "status": "done"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "status": "observation",
+    "companyName": "Empresa ABC",
+    "companyType": "Fornecedor",
+    "createBy": "Beltrano",
+    "severity": "Media",
+    "createDate": "16/05/2023",
+    "dueDate": "16/05/2024",
+    "questions": [
+      {
+        "name": "LGPD",
+        "description": "Avaliação LGPD",
+        "pointing": 70,
+        "severity": "Media",
+        "status": "done"
+      },
+      {
+        "name": "Questionário 1",
+        "description": "Avaliação questionário",
+        "pointing": 90,
+        "severity": "Alta",
+        "status": "done"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "status": "sent",
+    "companyName": "Empresa BBC",
+    "companyType": "Fornecedor",
+    "createBy": "José",
+    "severity": "Media",
+    "createDate": "16/05/2023",
+    "dueDate": "16/05/2024",
+    "questions": []
+  }
+]

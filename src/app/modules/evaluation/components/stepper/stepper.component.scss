@@ -1,0 +1,37 @@
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+.mat-stepper-horizontal, .mat-stepper-vertical {
+  background-color: transparent;
+}
+.align-stepper {
+  margin-top: 50px;
+  .title-stepper {
+    font-size: 24px;
+    color: #A2A2A2;
+  }
+
+}
+
+.custom-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 8px;
+  .mat-icon {
+    font-size: 24px;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #8BEBF8;
+    margin-top: 5px;
+  }
+  .text {
+    font-size: 20px;
+    color: #D6D6D6;
+  }
+}

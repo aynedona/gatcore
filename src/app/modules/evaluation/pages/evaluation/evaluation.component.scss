@@ -1,0 +1,107 @@
+@import '../../../../../assets/style/variables.scss';
+
+.links-evaluation {
+  padding-left: 23px;
+  padding-top: 5px;
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    &.previous {
+      color: #A2A2A2;
+    }
+    &.current {
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+.card-company {
+  margin: 0;
+  padding-right: 17px;
+  .default-card {
+    margin: 0;
+  }
+  img {
+    max-width: 85px;
+  }
+  .name-company {
+    color: $primary-font;
+    font-size: 18px;
+    margin: 8px 0 0 0;
+  }
+  .description-company {
+    color: $primary-font;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.data-evaluation {
+  margin-top: 70px;
+  flex-basis: 100%;
+}
+
+.card-evaluation {
+  padding-left: 17px;
+  .default-card {
+    margin: 0;
+  }
+  .mat-mdc-card-content {
+    width: 100%;
+    &.default-card {
+      margin-bottom: 0;
+    }
+  }
+  form {
+    h2 {
+      font-size: 24px;
+      color: #A2A2A2;
+      font-weight: bold;
+      height: 54px;
+    }
+    .form-group {
+      label {
+        font-size: 16px;
+        color: #6A6464;
+        width: 120px;
+        text-align: right;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.tabs-evaluation {
+  margin-top: 60px;
+  .label-tab {
+    .mdc-tab__text-label {
+      color: #B7B7B7;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.box-severity {
+  color: #16151C;
+  font-size: 16px;
+  width: 120px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 0;
+  &.alta {
+    background: #F32735;
+  }
+  &.media {
+    background: #C36118;
+  }
+  &.baixa {
+    background: #45FFAA;
+  }
+}
+
+.buttons-evaluation {
+  margin: 50px 0 68px 0;
+}

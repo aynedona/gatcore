@@ -1,0 +1,13 @@
+.suppliers {
+  width: 224px;
+  .progress-supplier {
+    position: relative;
+    p {
+      position: absolute;
+      top: 34px;
+      left: 30px;
+      font-size: 22px;
+      color: #79D2DE;
+    }
+  }
+}

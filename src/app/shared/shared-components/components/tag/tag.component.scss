@@ -1,0 +1,26 @@
+@import '../../../../../assets/style/variables.scss';
+
+.tag {
+  height: 46px;
+  padding: 0 25px;
+  border-top: none;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-radius: 0 0 24px 24px;
+  color: $primary-font;
+  &.transparent {
+    border-color: $primary-font;
+  }
+  &.orange {
+    border-color: $orange;
+    background: $orange;
+  }
+  .mat-icon {
+    margin-right: 14px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

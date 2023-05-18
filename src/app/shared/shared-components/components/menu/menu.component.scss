@@ -1,0 +1,26 @@
+@import '../../../../../assets/style/variables.scss';
+
+.item-menu{
+  padding: 8px 0;
+  max-width: 132px;
+  .align-menu {
+    padding: 5px 0;
+    &.isActive, &:hover {
+      border-radius: 0 25px 25px 0;
+      background: $orange;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    .mat-icon {
+      color: $primary-font;
+    }
+    .title-menu {
+      text-align: center;
+      margin: 4px 0 0 0;
+      color: $primary-font;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
